@@ -1,0 +1,9 @@
+C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Domain\bin\Debug\netstandard2.0\johnstore.Domain.deps.json
+C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Domain\bin\Debug\netstandard2.0\johnstore.Domain.dll
+C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Domain\bin\Debug\netstandard2.0\johnstore.Domain.pdb
+C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Domain\obj\Debug\netstandard2.0\johnstore.Domain.csprojAssemblyReference.cache
+C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Domain\obj\Debug\netstandard2.0\johnstore.Domain.csproj.CoreCompileInputs.cache
+C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Domain\obj\Debug\netstandard2.0\johnstore.Domain.AssemblyInfoInputs.cache
+C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Domain\obj\Debug\netstandard2.0\johnstore.Domain.AssemblyInfo.cs
+C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Domain\obj\Debug\netstandard2.0\johnstore.Domain.dll
+C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Domain\obj\Debug\netstandard2.0\johnstore.Domain.pdb

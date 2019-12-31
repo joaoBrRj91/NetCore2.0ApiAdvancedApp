@@ -1,0 +1,17 @@
+C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Tests\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Tests\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Tests\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Tests\bin\Debug\netcoreapp2.1\johnstore.tests.deps.json
+C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Tests\bin\Debug\netcoreapp2.1\johnstore.tests.runtimeconfig.json
+C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Tests\bin\Debug\netcoreapp2.1\johnstore.tests.runtimeconfig.dev.json
+C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Tests\bin\Debug\netcoreapp2.1\johnstore.tests.dll
+C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Tests\bin\Debug\netcoreapp2.1\johnstore.tests.pdb
+C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Tests\obj\Debug\netcoreapp2.1\johnstore.tests.csprojAssemblyReference.cache
+C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Tests\obj\Debug\netcoreapp2.1\johnstore.tests.csproj.CoreCompileInputs.cache
+C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Tests\obj\Debug\netcoreapp2.1\johnstore.tests.AssemblyInfoInputs.cache
+C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Tests\obj\Debug\netcoreapp2.1\johnstore.tests.AssemblyInfo.cs
+C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Tests\obj\Debug\netcoreapp2.1\johnstore.tests.dll
+C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Tests\obj\Debug\netcoreapp2.1\johnstore.tests.pdb
+C:\Developer\Cursos\Geral\DotNet\Projetos\NetCore2.0ApiAdvancedApp\JohnStore.Tests\bin\Debug\netcoreapp2.1\johnstore.Domain.dll
+C:\Developer\Cursos\Geral\DotNet\Projetos\NetCore2.0ApiAdvancedApp\JohnStore.Tests\bin\Debug\netcoreapp2.1\johnstore.Domain.pdb
+C:\Developer\Cursos\Geral\DotNet\Projetos\NetCore2.0ApiAdvancedApp\JohnStore.Tests\obj\Debug\netcoreapp2.1\johnstore.tests.csproj.CopyComplete
