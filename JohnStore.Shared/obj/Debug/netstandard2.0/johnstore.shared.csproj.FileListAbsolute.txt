@@ -2,8 +2,8 @@ C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Sha
 C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Shared\bin\Debug\netstandard2.0\johnstore.shared.dll
 C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Shared\bin\Debug\netstandard2.0\johnstore.shared.pdb
 C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Shared\obj\Debug\netstandard2.0\johnstore.shared.csprojAssemblyReference.cache
-C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Shared\obj\Debug\netstandard2.0\johnstore.shared.csproj.CoreCompileInputs.cache
 C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Shared\obj\Debug\netstandard2.0\johnstore.shared.AssemblyInfoInputs.cache
 C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Shared\obj\Debug\netstandard2.0\johnstore.shared.AssemblyInfo.cs
 C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Shared\obj\Debug\netstandard2.0\johnstore.shared.dll
 C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Shared\obj\Debug\netstandard2.0\johnstore.shared.pdb
+C:\Developer\Cursos\Geral\DotNet\Projetos\NetCore2.0ApiAdvancedApp\JohnStore.Shared\obj\Debug\netstandard2.0\johnstore.shared.csproj.CoreCompileInputs.cache

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Developer\\Cursos\\Geral\\DotNet\\Projetos\\NetCore2.0ApiAdvancedApp\\JohnStore.Api\\JohnStore.Api.csproj": {}
+    "c:\\Developer\\Cursos\\Geral\\DotNet\\Projetos\\NetCore2.0ApiAdvancedApp\\JohnStore.Api\\johnstore.api.csproj": {}
   },
   "projects": {
-    "C:\\Developer\\Cursos\\Geral\\DotNet\\Projetos\\NetCore2.0ApiAdvancedApp\\JohnStore.Api\\JohnStore.Api.csproj": {
+    "c:\\Developer\\Cursos\\Geral\\DotNet\\Projetos\\NetCore2.0ApiAdvancedApp\\JohnStore.Api\\johnstore.api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Developer\\Cursos\\Geral\\DotNet\\Projetos\\NetCore2.0ApiAdvancedApp\\JohnStore.Api\\JohnStore.Api.csproj",
-        "projectName": "JohnStore.Api",
-        "projectPath": "C:\\Developer\\Cursos\\Geral\\DotNet\\Projetos\\NetCore2.0ApiAdvancedApp\\JohnStore.Api\\JohnStore.Api.csproj",
+        "projectUniqueName": "c:\\Developer\\Cursos\\Geral\\DotNet\\Projetos\\NetCore2.0ApiAdvancedApp\\JohnStore.Api\\johnstore.api.csproj",
+        "projectName": "johnstore.api",
+        "projectPath": "c:\\Developer\\Cursos\\Geral\\DotNet\\Projetos\\NetCore2.0ApiAdvancedApp\\JohnStore.Api\\johnstore.api.csproj",
         "packagesPath": "C:\\Users\\joaon\\.nuget\\packages\\",
-        "outputPath": "C:\\Developer\\Cursos\\Geral\\DotNet\\Projetos\\NetCore2.0ApiAdvancedApp\\JohnStore.Api\\obj\\",
+        "outputPath": "c:\\Developer\\Cursos\\Geral\\DotNet\\Projetos\\NetCore2.0ApiAdvancedApp\\JohnStore.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -1,11 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using FluentValidator;
+using FluentValidator.Validation;
 using JohnStore.Domain.StoreContext.Enums;
 
 namespace JohnStore.Domain.StoreContext.Entities
 {
-    public class Order
+    public class Order : Notifiable
     {
 
         protected Order() { }
@@ -27,25 +29,33 @@ namespace JohnStore.Domain.StoreContext.Entities
 
         #region  Set/Get Elements of the Collections
         //TODO : Criar um base entity que tera o Id da entidade e métodos genericos de adição e retorno da coleção
-        public void AddItem(OrderItem item)
+        public void AddItem(Product product, decimal quantity)
         {
             //Valida Item
+            if (product.QuantityOnHand < quantity)
+                AddNotification("Quantity", "A quantidade informada é inferior ao estoque do produto.");
             //Adiciona ao pedido
-            Items.Add(item);
+            var orderItem = new OrderItem(quantity, product);
 
         }
 
         public List<OrderItem> GetOrderItens()
         {
             var orderItens = new List<OrderItem>();
-            orderItens.AddRange(Items.ToArray());
+
+            foreach (var item in Items)
+                orderItens.Add(new OrderItem(item.Quantity,item.Product));
+            
             return orderItens;
         }
 
         public List<Delivery> GetDeliveries()
         {
             var deliveries = new List<Delivery>();
-            deliveries.AddRange(Deliveries.ToArray());
+
+            foreach (var item in Deliveries)
+                deliveries.Add(new Delivery(item.EstimatedDeliveryDate));
+
             return deliveries;
         }
         #endregion 
@@ -60,6 +70,8 @@ namespace JohnStore.Domain.StoreContext.Entities
             Status = EOrderStatus.Created;
             Number = Guid.NewGuid().ToString().Replace("-", "").Substring(0, 8).ToUpper();
             //Validar Pedido
+            if (Items.Count == 0)
+                AddNotification("Items", "Não existem itens na ordem para ser enviada.");
 
         }
 
@@ -73,6 +85,8 @@ namespace JohnStore.Domain.StoreContext.Entities
         //Enviar um pedido
         public void Ship()
         {
+            if (Status != EOrderStatus.Paid)
+                AddNotification("Status", "O envio do pedido só pode ser realizado,após o pagamento");
 
             var itensDeliveries = Items.Count;
 
@@ -85,11 +99,15 @@ namespace JohnStore.Domain.StoreContext.Entities
 
             } while (itensDeliveries > 0);
 
+            Deliveries.ToList().ForEach(d => d.Ship());
         }
 
         //Cancelar um pedido
         public void Cancel()
         {
+            if (Deliveries.Any(d => d.Status == EDeliveryStatus.Shipped))
+                AddNotification("Status", "Não é possui cancelar o pedido,pois existem itens do pedido que já foram enviados.");
+
             Status = EOrderStatus.Canceled;
             Deliveries.ToList().ForEach(d => d.Cancel());
         }

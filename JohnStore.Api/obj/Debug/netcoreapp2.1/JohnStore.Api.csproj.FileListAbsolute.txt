@@ -4,7 +4,6 @@ C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Api
 C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Api\bin\Debug\netcoreapp2.1\JohnStore.Api.dll
 C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Api\bin\Debug\netcoreapp2.1\JohnStore.Api.pdb
 C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Api\obj\Debug\netcoreapp2.1\JohnStore.Api.csprojAssemblyReference.cache
-C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Api\obj\Debug\netcoreapp2.1\JohnStore.Api.csproj.CoreCompileInputs.cache
 C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Api\obj\Debug\netcoreapp2.1\JohnStore.Api.RazorAssemblyInfo.cache
 C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Api\obj\Debug\netcoreapp2.1\JohnStore.Api.RazorAssemblyInfo.cs
 C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Api\obj\Debug\netcoreapp2.1\JohnStore.Api.AssemblyInfoInputs.cache
@@ -12,3 +11,4 @@ C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Api
 C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Api\obj\Debug\netcoreapp2.1\JohnStore.Api.RazorTargetAssemblyInfo.cache
 C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Api\obj\Debug\netcoreapp2.1\JohnStore.Api.dll
 C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Api\obj\Debug\netcoreapp2.1\JohnStore.Api.pdb
+C:\Developer\Cursos\Geral\DotNet\Projetos\NetCore2.0ApiAdvancedApp\JohnStore.Api\obj\Debug\netcoreapp2.1\JohnStore.Api.csproj.CoreCompileInputs.cache

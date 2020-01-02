@@ -1,6 +1,8 @@
+using FluentValidator;
+
 namespace JohnStore.Domain.StoreContext.Entities
 {
-    public class OrderItem
+    public class OrderItem : Notifiable
     {
         public OrderItem(decimal quantity, Product product)
         {

@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.1": {
+      "FluentValidator/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/FluentValidator.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/FluentValidator.dll": {}
+        }
+      },
       "Microsoft.CodeCoverage/15.9.0": {
         "type": "package",
         "compile": {
@@ -1618,19 +1630,34 @@
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
       },
-      "johnstore.Domain/1.0.0": {
+      "JohnStore.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "FluentValidator": "2.0.2"
+        },
         "compile": {
-          "bin/placeholder/johnstore.Domain.dll": {}
+          "bin/placeholder/JohnStore.Domain.dll": {}
         },
         "runtime": {
-          "bin/placeholder/johnstore.Domain.dll": {}
+          "bin/placeholder/JohnStore.Domain.dll": {}
         }
       }
     }
   },
   "libraries": {
+    "FluentValidator/2.0.2": {
+      "sha512": "+jPy82KgA80/SjmesLUCQsBB+GWbffGYMeGUMizLWc87hQkBPnyrysfoa/Hiq0QciGEeFD1PokPwLafnNDnQ/Q==",
+      "type": "package",
+      "path": "fluentvalidator/2.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentvalidator.2.0.2.nupkg.sha512",
+        "fluentvalidator.nuspec",
+        "lib/netstandard1.3/FluentValidator.dll"
+      ]
+    },
     "Microsoft.CodeCoverage/15.9.0": {
       "sha512": "oherNadUtHKqFQbtdRKXgPvZVWyGkOeS83pFWT864587npS7JIFWIJ/LJV0c25cWNkCytn2S9XGSSkKscnNFAQ==",
       "type": "package",
@@ -5863,19 +5890,19 @@
         "system.xml.xpath.xmldocument.nuspec"
       ]
     },
-    "johnstore.Domain/1.0.0": {
+    "JohnStore.Domain/1.0.0": {
       "type": "project",
-      "path": "../JohnStore.Domain/johnstore.Domain.csproj",
-      "msbuildProject": "../JohnStore.Domain/johnstore.Domain.csproj"
+      "path": "../JohnStore.Domain/JohnStore.Domain.csproj",
+      "msbuildProject": "../JohnStore.Domain/JohnStore.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "JohnStore.Domain >= 1.0.0",
       "MSTest.TestAdapter >= 1.3.2",
       "MSTest.TestFramework >= 1.3.2",
       "Microsoft.NET.Test.Sdk >= 15.9.0",
-      "Microsoft.NETCore.App >= 2.1.0",
-      "johnstore.Domain >= 1.0.0"
+      "Microsoft.NETCore.App >= 2.1.0"
     ]
   },
   "packageFolders": {
@@ -5885,11 +5912,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Developer\\Cursos\\Geral\\DotNet\\Projetos\\NetCore2.0ApiAdvancedApp\\JohnStore.Tests\\johnstore.tests.csproj",
+      "projectUniqueName": "c:\\Developer\\Cursos\\Geral\\DotNet\\Projetos\\NetCore2.0ApiAdvancedApp\\JohnStore.Tests\\johnstore.tests.csproj",
       "projectName": "johnstore.tests",
-      "projectPath": "C:\\Developer\\Cursos\\Geral\\DotNet\\Projetos\\NetCore2.0ApiAdvancedApp\\JohnStore.Tests\\johnstore.tests.csproj",
+      "projectPath": "c:\\Developer\\Cursos\\Geral\\DotNet\\Projetos\\NetCore2.0ApiAdvancedApp\\JohnStore.Tests\\johnstore.tests.csproj",
       "packagesPath": "C:\\Users\\joaon\\.nuget\\packages\\",
-      "outputPath": "C:\\Developer\\Cursos\\Geral\\DotNet\\Projetos\\NetCore2.0ApiAdvancedApp\\JohnStore.Tests\\obj\\",
+      "outputPath": "c:\\Developer\\Cursos\\Geral\\DotNet\\Projetos\\NetCore2.0ApiAdvancedApp\\JohnStore.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5908,8 +5935,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Developer\\Cursos\\Geral\\DotNet\\Projetos\\NetCore2.0ApiAdvancedApp\\JohnStore.Domain\\johnstore.Domain.csproj": {
-              "projectPath": "C:\\Developer\\Cursos\\Geral\\DotNet\\Projetos\\NetCore2.0ApiAdvancedApp\\JohnStore.Domain\\johnstore.Domain.csproj"
+            "c:\\Developer\\Cursos\\Geral\\DotNet\\Projetos\\NetCore2.0ApiAdvancedApp\\JohnStore.Domain\\JohnStore.Domain.csproj": {
+              "projectPath": "c:\\Developer\\Cursos\\Geral\\DotNet\\Projetos\\NetCore2.0ApiAdvancedApp\\JohnStore.Domain\\JohnStore.Domain.csproj"
             }
           }
         }

@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
+      "FluentValidator/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/FluentValidator.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/FluentValidator.dll": {}
+        }
+      },
       "Microsoft.NETCore.Platforms/1.1.0": {
         "type": "package",
         "compile": {
@@ -29,6 +41,18 @@
     }
   },
   "libraries": {
+    "FluentValidator/2.0.2": {
+      "sha512": "+jPy82KgA80/SjmesLUCQsBB+GWbffGYMeGUMizLWc87hQkBPnyrysfoa/Hiq0QciGEeFD1PokPwLafnNDnQ/Q==",
+      "type": "package",
+      "path": "fluentvalidator/2.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentvalidator.2.0.2.nupkg.sha512",
+        "fluentvalidator.nuspec",
+        "lib/netstandard1.3/FluentValidator.dll"
+      ]
+    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
@@ -176,6 +200,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "FluentValidator >= 2.0.2",
       "NETStandard.Library >= 2.0.3"
     ]
   },
@@ -186,11 +211,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\developer\\cursos\\geral\\dotnet\\projetos\\NetCore2.0ApiAdvancedApp\\johnstore.Domain\\johnstore.Domain.csproj",
+      "projectUniqueName": "c:\\Developer\\Cursos\\Geral\\DotNet\\Projetos\\NetCore2.0ApiAdvancedApp\\JohnStore.Domain\\johnstore.Domain.csproj",
       "projectName": "johnstore.Domain",
-      "projectPath": "C:\\developer\\cursos\\geral\\dotnet\\projetos\\NetCore2.0ApiAdvancedApp\\johnstore.Domain\\johnstore.Domain.csproj",
+      "projectPath": "c:\\Developer\\Cursos\\Geral\\DotNet\\Projetos\\NetCore2.0ApiAdvancedApp\\JohnStore.Domain\\johnstore.Domain.csproj",
       "packagesPath": "C:\\Users\\joaon\\.nuget\\packages\\",
-      "outputPath": "C:\\developer\\cursos\\geral\\dotnet\\projetos\\NetCore2.0ApiAdvancedApp\\johnstore.Domain\\obj\\",
+      "outputPath": "c:\\Developer\\Cursos\\Geral\\DotNet\\Projetos\\NetCore2.0ApiAdvancedApp\\JohnStore.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -220,6 +245,10 @@
     "frameworks": {
       "netstandard2.0": {
         "dependencies": {
+          "FluentValidator": {
+            "target": "Package",
+            "version": "[2.0.2, )"
+          },
           "NETStandard.Library": {
             "suppressParent": "All",
             "target": "Package",

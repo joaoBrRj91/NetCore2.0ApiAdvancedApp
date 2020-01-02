@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Developer\\Cursos\\Geral\\DotNet\\Projetos\\NetCore2.0ApiAdvancedApp\\JohnStore.Shared\\johnstore.shared.csproj": {}
+    "c:\\Developer\\Cursos\\Geral\\DotNet\\Projetos\\NetCore2.0ApiAdvancedApp\\JohnStore.Shared\\johnstore.shared.csproj": {}
   },
   "projects": {
-    "C:\\Developer\\Cursos\\Geral\\DotNet\\Projetos\\NetCore2.0ApiAdvancedApp\\JohnStore.Shared\\johnstore.shared.csproj": {
+    "c:\\Developer\\Cursos\\Geral\\DotNet\\Projetos\\NetCore2.0ApiAdvancedApp\\JohnStore.Shared\\johnstore.shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Developer\\Cursos\\Geral\\DotNet\\Projetos\\NetCore2.0ApiAdvancedApp\\JohnStore.Shared\\johnstore.shared.csproj",
+        "projectUniqueName": "c:\\Developer\\Cursos\\Geral\\DotNet\\Projetos\\NetCore2.0ApiAdvancedApp\\JohnStore.Shared\\johnstore.shared.csproj",
         "projectName": "johnstore.shared",
-        "projectPath": "C:\\Developer\\Cursos\\Geral\\DotNet\\Projetos\\NetCore2.0ApiAdvancedApp\\JohnStore.Shared\\johnstore.shared.csproj",
+        "projectPath": "c:\\Developer\\Cursos\\Geral\\DotNet\\Projetos\\NetCore2.0ApiAdvancedApp\\JohnStore.Shared\\johnstore.shared.csproj",
         "packagesPath": "C:\\Users\\joaon\\.nuget\\packages\\",
-        "outputPath": "C:\\Developer\\Cursos\\Geral\\DotNet\\Projetos\\NetCore2.0ApiAdvancedApp\\JohnStore.Shared\\obj\\",
+        "outputPath": "c:\\Developer\\Cursos\\Geral\\DotNet\\Projetos\\NetCore2.0ApiAdvancedApp\\JohnStore.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

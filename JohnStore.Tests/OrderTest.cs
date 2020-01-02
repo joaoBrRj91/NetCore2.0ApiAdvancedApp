@@ -4,10 +4,10 @@ using JohnStore.Domain.StoreContext.Entities;
 namespace johnstore.tests
 {
     [TestClass]
-    public class UnitTest1
+    public class OrderTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void GeneratedValidOrder()
         {
             //var customer = new Customer("Joao","Nascimento","32321312312","joao@gmail.com","234234234324","Rua vassouras, 45");
             //var order = new Order(customer);
