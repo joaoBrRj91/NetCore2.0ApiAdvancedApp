@@ -1,9 +1,0 @@
-C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Infra\bin\Debug\netcoreapp2.1\JohnStore.Infra.deps.json
-C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Infra\bin\Debug\netcoreapp2.1\JohnStore.Infra.dll
-C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Infra\bin\Debug\netcoreapp2.1\JohnStore.Infra.pdb
-C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Infra\obj\Debug\netcoreapp2.1\JohnStore.Infra.AssemblyInfoInputs.cache
-C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Infra\obj\Debug\netcoreapp2.1\JohnStore.Infra.AssemblyInfo.cs
-C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Infra\obj\Debug\netcoreapp2.1\JohnStore.Infra.dll
-C:\developer\cursos\geral\dotnet\projetos\netcore2.0apiadvancedapp\JohnStore.Infra\obj\Debug\netcoreapp2.1\JohnStore.Infra.pdb
-C:\Developer\Cursos\Geral\DotNet\Projetos\NetCore2.0ApiAdvancedApp\JohnStore.Infra\obj\Debug\netcoreapp2.1\JohnStore.Infra.csprojAssemblyReference.cache
-C:\Developer\Cursos\Geral\DotNet\Projetos\NetCore2.0ApiAdvancedApp\JohnStore.Infra\obj\Debug\netcoreapp2.1\JohnStore.Infra.csproj.CoreCompileInputs.cache
