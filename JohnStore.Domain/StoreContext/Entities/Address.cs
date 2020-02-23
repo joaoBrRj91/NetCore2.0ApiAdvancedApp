@@ -35,7 +35,7 @@ namespace JohnStore.Domain.StoreContext.Entities
         public string State { get; protected set; }
         public string Country { get; protected set; }
         public string ZipCode { get; protected set; }
-        public EAddressType Type { get; private set; }
+        public EAddressType Type { get; protected set; }
 
     }
 }

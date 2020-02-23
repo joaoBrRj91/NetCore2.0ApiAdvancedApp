@@ -27,6 +27,7 @@ namespace JohnStore.Domain.StoreContext.Entities
         public Document Document { get; protected set; }
         public Email Email { get; protected set; }
         public string Phone { get; protected set; }
+        private List<Address> _addresses{ get; set; }
         protected ICollection<Address> Addresses { get; set; }
 
 
@@ -39,9 +40,21 @@ namespace JohnStore.Domain.StoreContext.Entities
 
         public List<Address> GetAddresses()
         {
-            var addresses = new List<Address>();
-            addresses.AddRange(Addresses.ToArray());
-            return addresses;
+            _addresses = new List<Address>();
+            
+            foreach (var address in Addresses)
+                _addresses.Add(
+                    new Address(address.Street,
+                    address.Number,
+                    address.Complement,
+                    address.District,
+                    address.City,
+                    address.State,
+                    address.Country,
+                    address.ZipCode,
+                    address.Type));
+
+            return _addresses;
         }
 
         public override string ToString() => Name.ToString();
