@@ -1,13 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using FluentValidator;
-using FluentValidator.Validation;
 using JohnStore.Domain.StoreContext.Enums;
+using JohnStore.Shared.Entities;
 
 namespace JohnStore.Domain.StoreContext.Entities
 {
-    public class Order : Notifiable
+    public class Order : Entity
     {
 
         protected Order() { }

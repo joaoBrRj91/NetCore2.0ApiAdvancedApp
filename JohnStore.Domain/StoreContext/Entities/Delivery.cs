@@ -1,8 +1,9 @@
 using System;
+using JohnStore.Shared.Entities;
 
 namespace JohnStore.Domain.StoreContext.Entities
 {
-    public class Delivery
+    public class Delivery : Entity
     {
         public Delivery(DateTime estimatedDeliveryDate)
         {

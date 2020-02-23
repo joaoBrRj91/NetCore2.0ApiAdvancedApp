@@ -11,6 +11,7 @@ namespace JohnStore.Domain.StoreContext.Commands.CustomerCommands.Inputs
     public string LastNome { get; set; }
     public string Document { get; set; }
     public string Email { get; set; }
+    public string Phone { get; set; }
 
     //FAIL FAST VALIDATION
     public bool IsValidCommand()

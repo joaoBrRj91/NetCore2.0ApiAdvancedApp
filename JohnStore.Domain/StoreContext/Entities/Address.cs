@@ -1,8 +1,9 @@
 using JohnStore.Domain.StoreContext.Enums;
+using JohnStore.Shared.Entities;
 
 namespace JohnStore.Domain.StoreContext.Entities
 {
-    public class Address
+    public class Address : Entity
     {
         protected Address() { }
         public Address(
