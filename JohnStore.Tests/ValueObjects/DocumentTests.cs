@@ -26,7 +26,7 @@ namespace JohnStore.Tests.ValueObjects
         public void ShouldReturnNotNotificationWhenDocumentIsValid()
         {
             Assert.AreEqual(true, validDocument.IsValid);
-            Assert.AreEqual(0, inValidDocument.Notifications.Count);
+            Assert.AreEqual(0, validDocument.Notifications.Count);
         }
 
     }
