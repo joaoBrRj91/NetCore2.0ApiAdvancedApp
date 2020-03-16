@@ -55,14 +55,14 @@ namespace JohnStore.Domain.StoreContext.Handlers
       if (Invalid)
         return commandResult;
 
-	//Persistir no banco de dados
-	_customerRepository.Save(customer);
+      //Persistir no banco de dados
+      _customerRepository.Save(customer);
 
-	//Enviar e-mail de boas vindas
-	_smsService.Send(email.Address,"hello@johnStore.io","Bem vindo","Seja Bem vinto ao John Store!!");
+      //Enviar e-mail de boas vindas
+      _smsService.Send(email.Address, "hello@johnStore.io", "Bem vindo", "Seja Bem vinto ao John Store!!");
 
-	//Retornar o resultado para a tela
-	return new CreateCustomerCommandResult(customer.Id,customer.Name.ToString(),customer.Email.Address);
+      //Retornar o resultado para a tela
+      return new CreateCustomerCommandResult(customer.Id, customer.Name.ToString(), customer.Email.Address);
 
     }
 

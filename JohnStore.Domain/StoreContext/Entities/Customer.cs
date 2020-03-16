@@ -63,7 +63,6 @@ namespace JohnStore.Domain.StoreContext.Entities
       AddNotifications(Name.Notifications);
       AddNotifications(Document.Notifications);
       AddNotifications(Email.Notifications);
-      AddNotifications(this.Notifications);
 
     }
 
