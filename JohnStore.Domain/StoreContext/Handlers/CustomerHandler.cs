@@ -16,9 +16,9 @@ namespace JohnStore.Domain.StoreContext.Handlers
   {
 
     private readonly ICustomerRepository _customerRepository;
-    private readonly ISmsService _smsService;
+    private readonly IEmailService _smsService;
 
-    public CustomerHandler(ICustomerRepository customerRepository, ISmsService smsService)
+    public CustomerHandler(ICustomerRepository customerRepository, IEmailService smsService)
     {
       _customerRepository = customerRepository;
       _smsService = smsService;
