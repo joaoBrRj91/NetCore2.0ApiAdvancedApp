@@ -15,7 +15,7 @@ namespace JohnStore.Domain.StoreContext.Entities
             string state,
             string country,
             string zipCode,
-            EAddressType type)
+            EAddressType type) : base()
         {
             Street = street;
             Number = number;

@@ -20,7 +20,7 @@ namespace JohnStore.Domain.StoreContext.Commands.OrderCommands
                .HasMaxLen(Customer.ToString(), 36, "Customer", "Identificador do cliente inválido")
                .IsGreaterThan(OrderItems.Count, 0, "OrderItems", "Nenhum item do pedido foi encontrado"));
 
-      return base.IsValid;
+      return IsValid;
 
     }
 

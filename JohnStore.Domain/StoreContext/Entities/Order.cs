@@ -10,7 +10,7 @@ namespace JohnStore.Domain.StoreContext.Entities
     {
 
         protected Order() { }
-        public Order(Customer customer)
+        public Order(Customer customer) : base()
         {
             Customer = customer;
 
@@ -110,6 +110,7 @@ namespace JohnStore.Domain.StoreContext.Entities
         }
 
         #endregion
+
 
     }
 }

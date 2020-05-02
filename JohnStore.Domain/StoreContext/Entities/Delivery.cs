@@ -5,7 +5,9 @@ namespace JohnStore.Domain.StoreContext.Entities
 {
     public class Delivery : Entity
     {
-        public Delivery(DateTime estimatedDeliveryDate)
+        protected Delivery() { }
+
+        public Delivery(DateTime estimatedDeliveryDate) : base()
         {
             CreateDate = DateTime.Now;
             EstimatedDeliveryDate = estimatedDeliveryDate;

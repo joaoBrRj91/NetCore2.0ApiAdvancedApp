@@ -1,19 +1,15 @@
 
 using FluentValidator;
+using System;
 
 namespace JohnStore.Shared.Entities
 {
-  public abstract class Entity : Notifiable
-  {
-    public Entity() => Id = System.Guid.NewGuid();
-    
-
-    public System.Guid Id { get; private set; }
-
-    public virtual void ValidateEntity()
+    public abstract class Entity : Notifiable
     {
-      return;
+        public Entity() => Id = Guid.NewGuid();
 
+        public Guid Id { get; protected set; }
+
+        public virtual void ValidateEntity() { }
     }
-  }
 }
