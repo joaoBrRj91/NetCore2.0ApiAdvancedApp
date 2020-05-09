@@ -3,6 +3,7 @@ using JohnStore.Domain.StoreContext.Repositories;
 using JohnStore.Infra.StoreContext.DataContext;
 using System.Linq;
 using Dapper;
+using johnstore.Domain.StoreContext.Queries;
 
 namespace JohnStore.Infra.StoreContext.Repositories
 {
@@ -37,6 +38,19 @@ namespace JohnStore.Infra.StoreContext.Repositories
                         commandType: System.Data.CommandType.StoredProcedure
                     )
                 .FirstOrDefault();
+        }
+
+        public CustomerOrdersCountQueryResult GetCustomerOrdersCount(string document)
+        {
+            return
+               _context
+               .Connection
+               .Query<CustomerOrdersCountQueryResult>(
+                       "sp_GetCustomerOrdersCount",
+                       new { Document = document },
+                       commandType: System.Data.CommandType.StoredProcedure
+                   )
+               .FirstOrDefault();
         }
 
         public void Save(Customer customer)
