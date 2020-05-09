@@ -1,17 +1,25 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JohnStore.Api", "JohnStore.Api\JohnStore.Api.csproj", "{5BEE7B7D-53E8-48A7-AA78-5842238491B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JohnStore.Api", "JohnStore.Api\JohnStore.Api.csproj", "{5BEE7B7D-53E8-48A7-AA78-5842238491B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "johnstore.Domain", "JohnStore.Domain\johnstore.Domain.csproj", "{75CE2250-B5BF-42F5-A39F-32309768CA4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "johnstore.Domain", "JohnStore.Domain\johnstore.Domain.csproj", "{75CE2250-B5BF-42F5-A39F-32309768CA4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "johnstore.shared", "JohnStore.Shared\johnstore.shared.csproj", "{F953055F-69E1-4449-B589-BD936F8ED6D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "johnstore.shared", "JohnStore.Shared\johnstore.shared.csproj", "{F953055F-69E1-4449-B589-BD936F8ED6D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "johnstore.tests", "JohnStore.Tests\johnstore.tests.csproj", "{08EF6499-416F-409D-AF2E-79F0CB32B871}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "johnstore.tests", "JohnStore.Tests\johnstore.tests.csproj", "{08EF6499-416F-409D-AF2E-79F0CB32B871}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JohnStore.Infra", "JohnStore.Infra\JohnStore.Infra.csproj", "{B1E79A51-3598-4FA1-AF1C-39DC23FA1290}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JohnStore.Infra", "JohnStore.Infra\JohnStore.Infra.csproj", "{B1E79A51-3598-4FA1-AF1C-39DC23FA1290}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Presentation(Api)", "1 - Presentation(Api)", "{E749AECE-8021-438F-B18C-52C1F65E6C1A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Infra", "2 - Infra", "{17EFB9A9-F64D-4332-A231-15BB881DB5DF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Shared", "3 - Shared", "{CA926904-C48D-4080-A58C-C27640F9AA07}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Domain", "4 - Domain", "{5D3901ED-9DE4-419B-971C-F01F7003A14B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +29,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{5BEE7B7D-53E8-48A7-AA78-5842238491B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -86,5 +91,17 @@ Global
 		{B1E79A51-3598-4FA1-AF1C-39DC23FA1290}.Release|x64.Build.0 = Release|Any CPU
 		{B1E79A51-3598-4FA1-AF1C-39DC23FA1290}.Release|x86.ActiveCfg = Release|Any CPU
 		{B1E79A51-3598-4FA1-AF1C-39DC23FA1290}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5BEE7B7D-53E8-48A7-AA78-5842238491B7} = {E749AECE-8021-438F-B18C-52C1F65E6C1A}
+		{75CE2250-B5BF-42F5-A39F-32309768CA4A} = {5D3901ED-9DE4-419B-971C-F01F7003A14B}
+		{F953055F-69E1-4449-B589-BD936F8ED6D1} = {CA926904-C48D-4080-A58C-C27640F9AA07}
+		{B1E79A51-3598-4FA1-AF1C-39DC23FA1290} = {17EFB9A9-F64D-4332-A231-15BB881DB5DF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E2B7BAE2-E8E2-4900-8AB8-4AB60366B9AC}
 	EndGlobalSection
 EndGlobal
