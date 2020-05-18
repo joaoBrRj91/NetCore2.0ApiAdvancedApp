@@ -1,9 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Net;
-using JohnStore.Domain.StoreContext.Entities;
+﻿using System;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using System.Linq;
-using System;
 using JohnStore.Domain.StoreContext.Repositories;
 using johnstore.Domain.StoreContext.Queries;
 using JohnStore.Domain.StoreContext.Handlers;
@@ -31,6 +28,10 @@ namespace JohnStore.Api.Controllers
 
         [HttpGet("{id}")]
         public GetCustomerQueryResult Get(Guid id) => customerRepository.Get(id);
+
+        [HttpGet("{document}/orders")]
+        public CustomerOrdersCountQueryResult GetOrdersByCustomerDocument(string document) => 
+            customerRepository.GetCustomerOrdersCount(document);
 
         [HttpPost]
         public ICommandResult Post([FromBody] CreateCustomerCommand command)
