@@ -24,6 +24,8 @@ namespace JohnStore.Api.Controllers
         }
 
         [HttpGet("v1")]
+        [ResponseCache(Duration =60, Location = ResponseCacheLocation.Client)]
+        //Cache-Control: public,max-age=60
         public IEnumerable<GetCustomerQueryResult> Get() => customerRepository.Get();
 
 

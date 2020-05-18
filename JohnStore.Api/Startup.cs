@@ -16,6 +16,7 @@ namespace johnstore.api
         {
             #region Midllewares
             services.AddMvc();
+            services.AddResponseCompression();
             #endregion
 
             #region DI Midllewares
@@ -33,6 +34,7 @@ namespace johnstore.api
 
 
             app.UseMvc();
+            app.UseResponseCompression();
 
         }
     }
