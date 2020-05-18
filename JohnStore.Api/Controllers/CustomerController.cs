@@ -23,15 +23,25 @@ namespace JohnStore.Api.Controllers
             this.customerHandler = customerHandler;
         }
 
-        [HttpGet]
+        [HttpGet("v1")]
         public IEnumerable<GetCustomerQueryResult> Get() => customerRepository.Get();
 
-        [HttpGet("{id}")]
+
+        [HttpGet("v1/{id}")]
         public GetCustomerQueryResult Get(Guid id) => customerRepository.Get(id);
 
-        [HttpGet("{document}/orders")]
+
+        [HttpGet("v2/{document}")]
+        public GetCustomerQueryResult Get(string document)
+        {
+            return null;
+        }
+
+
+        [HttpGet("v1/{document}/orders")]
         public CustomerOrdersCountQueryResult GetOrdersByCustomerDocument(string document) => 
             customerRepository.GetCustomerOrdersCount(document);
+
 
         [HttpPost]
         public ICommandResult Post([FromBody] CreateCustomerCommand command)
