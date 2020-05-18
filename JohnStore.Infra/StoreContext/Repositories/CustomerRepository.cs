@@ -4,6 +4,8 @@ using JohnStore.Infra.StoreContext.DataContext;
 using System.Linq;
 using Dapper;
 using johnstore.Domain.StoreContext.Queries;
+using System.Collections.Generic;
+using System;
 
 namespace JohnStore.Infra.StoreContext.Repositories
 {
@@ -35,6 +37,30 @@ namespace JohnStore.Infra.StoreContext.Repositories
                 .Query<bool>(
                         "sp_CheckEmail",
                         new { Email = email },
+                        commandType: System.Data.CommandType.StoredProcedure
+                    )
+                .FirstOrDefault();
+        }
+
+        public IEnumerable<GetCustomerQueryResult> Get()
+        {
+            return
+                 _context
+                 .Connection
+                 .Query<GetCustomerQueryResult>(
+                         "sp_GetCustomerQueryResult",
+                         commandType: System.Data.CommandType.StoredProcedure
+                     );
+        }
+
+        public GetCustomerQueryResult Get(Guid id)
+        {
+            return
+                _context
+                .Connection
+                .Query<GetCustomerQueryResult>(
+                        "SP_GetCustomerByIdQueryResult",
+                        new { Id = id},
                         commandType: System.Data.CommandType.StoredProcedure
                     )
                 .FirstOrDefault();

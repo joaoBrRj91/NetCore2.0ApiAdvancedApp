@@ -1,3 +1,5 @@
+--TODO: Realizar o inner join no subselect para melhorar a performance quando estivermos em prod
+
 CREATE PROCEDURE sp_GetCustomerOrdersCount
     @Document CHAR(11)
 AS

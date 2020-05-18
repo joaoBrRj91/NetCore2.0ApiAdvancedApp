@@ -4,6 +4,8 @@ using JohnStore.Domain.StoreContext.Entities;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using System;
+using JohnStore.Domain.StoreContext.Repositories;
+using johnstore.Domain.StoreContext.Queries;
 
 namespace JohnStore.Api.Controllers
 {
@@ -11,33 +13,19 @@ namespace JohnStore.Api.Controllers
     [ApiController]
     public class CustomerController : ControllerBase
     {
-        private IEnumerable<Customer> _customers;
 
-        public CustomerController() => _customers = new List<Customer>();
+        private ICustomerRepository customerRepository;
 
-        // GET: api/Customer
+        public CustomerController(ICustomerRepository customerRepository)
+        {
+            this.customerRepository = customerRepository;
+        }
+
         [HttpGet]
-        public IActionResult Get()
-        {
-            return new JsonResult(_customers)
-            {
-                ContentType = "application/json",
-                StatusCode = (int?)HttpStatusCode.OK
-            };
-        }
+        public IEnumerable<GetCustomerQueryResult> Get() => customerRepository.Get();
 
-        // GET: api/Customer/5
         [HttpGet("{id}")]
-        public IActionResult Get(Guid id)
-        {
-            var customer = _customers.FirstOrDefault(c => c.Id == id);
-
-            return new JsonResult(customer)
-            {
-                ContentType = "application/json",
-                StatusCode = (int?)HttpStatusCode.OK
-            };
-        }
+        public GetCustomerQueryResult Get(Guid id) => customerRepository.Get(id);
 
         // POST: api/Customer
         [HttpPost]
