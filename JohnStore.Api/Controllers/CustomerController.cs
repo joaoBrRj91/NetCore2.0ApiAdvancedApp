@@ -6,6 +6,9 @@ using System.Linq;
 using System;
 using JohnStore.Domain.StoreContext.Repositories;
 using johnstore.Domain.StoreContext.Queries;
+using JohnStore.Domain.StoreContext.Handlers;
+using JohnStore.Domain.StoreContext.Commands.CustomerCommands.Inputs;
+using JohnStore.Shared.Commands;
 
 namespace JohnStore.Api.Controllers
 {
@@ -14,11 +17,13 @@ namespace JohnStore.Api.Controllers
     public class CustomerController : ControllerBase
     {
 
-        private ICustomerRepository customerRepository;
+        private readonly ICustomerRepository customerRepository;
+        private readonly CustomerHandler customerHandler;
 
-        public CustomerController(ICustomerRepository customerRepository)
+        public CustomerController(ICustomerRepository customerRepository, CustomerHandler customerHandler)
         {
             this.customerRepository = customerRepository;
+            this.customerHandler = customerHandler;
         }
 
         [HttpGet]
@@ -27,37 +32,32 @@ namespace JohnStore.Api.Controllers
         [HttpGet("{id}")]
         public GetCustomerQueryResult Get(Guid id) => customerRepository.Get(id);
 
-        // POST: api/Customer
         [HttpPost]
-        public IActionResult Post([FromBody] Customer customer)
+        public ICommandResult Post([FromBody] CreateCustomerCommand command)
         {
-            return new JsonResult(customer)
-            {
-                ContentType = "application/json",
-                StatusCode = (int?)HttpStatusCode.Created
-            };
+            return customerHandler.Handler(command);
         }
 
-        // PUT: api/Customer/5
-        [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody] Customer customer)
-        {
-            return new JsonResult(customer)
-            {
-                ContentType = "application/json",
-                StatusCode = (int?)HttpStatusCode.OK
-            };
-        }
+        //// PUT: api/Customer/5
+        //[HttpPut("{id}")]
+        //public IActionResult Put(int id, [FromBody] Customer customer)
+        //{
+        //    return new JsonResult(customer)
+        //    {
+        //        ContentType = "application/json",
+        //        StatusCode = (int?)HttpStatusCode.OK
+        //    };
+        //}
 
-        // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
-        {
-            return new ContentResult()
-            {
-                ContentType = "application/json",
-                StatusCode = (int?)HttpStatusCode.NoContent
-            };
-        }
+        //// DELETE: api/ApiWithActions/5
+        //[HttpDelete("{id}")]
+        //public IActionResult Delete(int id)
+        //{
+        //    return new ContentResult()
+        //    {
+        //        ContentType = "application/json",
+        //        StatusCode = (int?)HttpStatusCode.NoContent
+        //    };
+        //}
     }
 }

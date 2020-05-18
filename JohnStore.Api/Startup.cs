@@ -1,4 +1,5 @@
-﻿using JohnStore.Domain.StoreContext.Repositories;
+﻿using JohnStore.Domain.StoreContext.Handlers;
+using JohnStore.Domain.StoreContext.Repositories;
 using JohnStore.Domain.StoreContext.Services;
 using JohnStore.Infra.StoreContext.DataContext;
 using JohnStore.Infra.StoreContext.Repositories;
@@ -21,6 +22,7 @@ namespace johnstore.api
             services.AddScoped<JohnStoreDataContext>();
             services.AddTransient<ICustomerRepository, CustomerRepository>();
             services.AddTransient<IEmailService, EmailService>();
+            services.AddTransient<CustomerHandler>();
             #endregion
         }
 
