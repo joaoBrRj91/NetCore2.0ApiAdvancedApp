@@ -6,6 +6,7 @@ using JohnStore.Domain.StoreContext.Repositories;
 using JohnStore.Domain.StoreContext.Services;
 using JohnStore.Domain.StoreContext.ValueObjects;
 using JohnStore.Shared.Commands;
+using System.Linq;
 
 namespace JohnStore.Domain.StoreContext.Handlers
 {
@@ -26,20 +27,16 @@ namespace JohnStore.Domain.StoreContext.Handlers
 
         public ICommandResult Handler(CreateCustomerCommand command)
         {
-            ICommandResult commandResult = null;
-
             //Verificar o CPF já existe na base
             if (_customerRepository.CheckDocument(command.Document))
             {
                 AddNotification("Document", "Este CPF já está em uso");
-                return commandResult;
             }
 
             //Verificar se o E-mail já existe na base
             if (_customerRepository.CheckEmail(command.Email))
             {
-                AddNotification("Document", "Este CPF já está em uso");
-                return commandResult;
+                AddNotification("Document", "Este Email já está em uso");
             }
 
             //Criar VOs => Poderiamos utilizar o Pattern Builder para criar o customer
@@ -53,7 +50,8 @@ namespace JohnStore.Domain.StoreContext.Handlers
             AddNotifications(customer.Notifications);
 
             if (Invalid)
-                return commandResult;
+                return new CreateCustomerCommandResult(Notifications.ToDictionary(p => p.Property, m => m.Message));
+
 
             //Persistir no banco de dados
             _customerRepository.Save(customer);
@@ -62,7 +60,11 @@ namespace JohnStore.Domain.StoreContext.Handlers
             _smsService.Send(email.Address, "hello@johnStore.io", "Bem vindo", "Seja Bem vinto ao John Store!!");
 
             //Retornar o resultado para a tela
-            return new CreateCustomerCommandResult(customer.Id, customer.Name.ToString(), customer.Email.Address);
+            return new CreateCustomerCommandResult(
+                customer.Id, 
+                customer.Name.ToString(), 
+                customer.Email.Address,
+                Notifications.ToDictionary(p => p.Property, m => m.Message));
 
         }
 

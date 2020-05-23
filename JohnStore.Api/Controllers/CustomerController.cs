@@ -6,6 +6,7 @@ using johnstore.Domain.StoreContext.Queries;
 using JohnStore.Domain.StoreContext.Handlers;
 using JohnStore.Domain.StoreContext.Commands.CustomerCommands.Inputs;
 using JohnStore.Shared.Commands;
+using johnstore.shared.Responses;
 
 namespace JohnStore.Api.Controllers
 {
@@ -46,10 +47,8 @@ namespace JohnStore.Api.Controllers
 
 
         [HttpPost]
-        public ICommandResult Post([FromBody] CreateCustomerCommand command)
-        {
-            return customerHandler.Handler(command);
-        }
+        public ResponseResult Post([FromBody] CreateCustomerCommand command) => 
+            new ResponseResult(customerHandler.Handler(command));
 
         //// PUT: api/Customer/5
         //[HttpPut("{id}")]
