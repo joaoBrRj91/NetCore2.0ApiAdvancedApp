@@ -25,6 +25,10 @@ namespace johnstore.api
             services.AddTransient<IEmailService, EmailService>();
             services.AddTransient<CustomerHandler>();
             #endregion
+
+            services.AddSwaggerGen(s => {
+                s.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "My API", Version = "v1" });
+            });
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -35,7 +39,9 @@ namespace johnstore.api
 
             app.UseMvc();
             app.UseResponseCompression();
-
+            app.UseSwagger();
+            app.UseSwaggerUI(s => s.SwaggerEndpoint("/swagger/v1/swagger.json", "Balta Store - V1"));
+                      
         }
     }
 }
