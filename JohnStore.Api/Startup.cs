@@ -31,14 +31,15 @@ namespace johnstore.api
             #endregion
 
             #region Midllewares
-            services.AddMvc();
+            services.AddMvc().SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_2_1);
             services.AddResponseCompression();
+            services.AddApplicationInsightsTelemetry(Configuration);
 
             services.AddSwaggerGen(s => {
                 s.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "My API", Version = "v1" });
             });
 
-            //Elmah.io server web apra logs
+            //Elmah.io server web apra logs (Criar conta e substituir os valores de ApiKey e LogId pelos informados na criação da conta)
             services.AddElmahIo(e =>
             {
                 //Key de autenticação do Elmah.IO
