@@ -1,4 +1,5 @@
-﻿using JohnStore.Domain.StoreContext.Handlers;
+﻿using Elmah.Io.AspNetCore;
+using JohnStore.Domain.StoreContext.Handlers;
 using JohnStore.Domain.StoreContext.Repositories;
 using JohnStore.Domain.StoreContext.Services;
 using JohnStore.Infra.StoreContext.DataContext;
@@ -17,6 +18,20 @@ namespace johnstore.api
             #region Midllewares
             services.AddMvc();
             services.AddResponseCompression();
+
+            services.AddSwaggerGen(s => {
+                s.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "My API", Version = "v1" });
+            });
+
+            //Elmah.io server web apra logs
+            services.AddElmahIo(e =>
+            {
+                //Key de autenticação do Elmah.IO
+                e.ApiKey = "API_KEY";
+                //GUID da aplicação(API) que o log será enviado
+                e.LogId = new System.Guid("LOG ID");
+            });
+
             #endregion
 
             #region DI Midllewares
@@ -25,10 +40,7 @@ namespace johnstore.api
             services.AddTransient<IEmailService, EmailService>();
             services.AddTransient<CustomerHandler>();
             #endregion
-
-            services.AddSwaggerGen(s => {
-                s.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "My API", Version = "v1" });
-            });
+           
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -41,7 +53,7 @@ namespace johnstore.api
             app.UseResponseCompression();
             app.UseSwagger();
             app.UseSwaggerUI(s => s.SwaggerEndpoint("/swagger/v1/swagger.json", "Balta Store - V1"));
-                      
+            app.UseElmahIo();
         }
     }
 }
