@@ -8,13 +8,28 @@ using JohnStore.Infra.StoreContext.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Configuration;
+using System.IO;
+using johnstore.shared.Database;
 
 namespace johnstore.api
 {
     public class Startup
     {
+
+        public IConfiguration Configuration { get; set; }
+
         public void ConfigureServices(IServiceCollection services)
         {
+            #region Configuration Settings
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json");
+
+            Configuration = builder.Build();
+            DbSettings.ConnectionString = Configuration["ConnectionString"];
+            #endregion
+
             #region Midllewares
             services.AddMvc();
             services.AddResponseCompression();
@@ -35,6 +50,7 @@ namespace johnstore.api
             #endregion
 
             #region DI Midllewares
+            //services.AddSingleton(Configuration);
             services.AddScoped<JohnStoreDataContext>();
             services.AddTransient<ICustomerRepository, CustomerRepository>();
             services.AddTransient<IEmailService, EmailService>();
